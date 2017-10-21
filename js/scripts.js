@@ -5,19 +5,26 @@ function kek() {
 }
 
 function showSignInFrame() {
-	var frame = document.getElementById('signInFrame');
-	
-	if (frame.style.visibility === 'visible') {
-		frame.style.visibility = 'hidden';
-	} else {
-		frame.style.visibility = 'visible';
+	var signInFrame = document.getElementById('signInFrame');
+	var signUpFrame = document.getElementById('signUpFrame');
+	 if (signUpFrame.style.visibility !== 'visible') {
+		if (signInFrame.style.visibility === 'visible') {
+			signInFrame.style.visibility = 'hidden';
+		} else {
+			signInFrame.style.visibility = 'visible';
+		}
 	}
 }
 
 function showSignUpFrame() {
-	var frame = document.getElementById('signUpFrame');
-
-	if (frame.style.visibility = 'visible') {
-		frame.style.visibility = 'hidden';
+	var signUpFrame = document.getElementById('signUpFrame');
+	var signInFrame = document.getElementById('signInFrame');
+	if (signInFrame.style.visibility !== 'visible') {
+		if (signUpFrame.style.visibility === 'visible') {
+			signUpFrame.style.visibility = 'hidden';
+		} else {
+			signUpFrame.style.visibility = 'visible';
+		}
 	}
+
 }

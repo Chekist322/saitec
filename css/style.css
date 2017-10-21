@@ -102,5 +102,10 @@
 
 #signInFrame {
 	background-color: red;
-	visibility: visible;
+	visibility: hidden;
+}
+
+#signUpFrame {
+	background-color: red;
+	visibility: hidden;
 }
