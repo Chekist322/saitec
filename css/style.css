@@ -1,0 +1,106 @@
+.main {
+	background: url(../data/indexElements/bg.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.overlayColor {
+	background-color: rgba(9, 5, 37, 0.67);
+	position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.logo_top_left {
+	position: absolute;
+ 	left: 74px;
+ 	top: 41px;
+ 	width: 123px;
+ 	height: 60px;
+ 	z-index: 3;
+}
+
+.top_decor {
+ 	margin: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	position: absolute;
+	top: 278px;
+	width: 345px;
+	height: 80px;
+}
+
+.bottom_decor {
+  margin: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	position: absolute;
+  position: absolute;
+  top: 573px;
+  width: 183px;
+  height: 43px;
+}
+
+.line_decor {
+  margin: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	position: absolute;
+  top: 494px;
+  width: 683px;
+  height: 5px;
+}
+
+@font-face {font-family: KEK; src: url(../data/fonts/welcome.ttf);}
+
+.hello {
+	color: white;
+	margin: 0;
+    left: 50%;
+    top: 400px;
+    transform: translate(-50%, -50%);
+	position: absolute;
+	font-family: KEK;
+	font-size: 22pt;
+	font-style: italic;
+	width: 964px;
+	text-align: center;
+	line-height: 32px;
+}
+
+.signInButton {
+  background-image: url("../data/indexElements/signIn.png");
+  position: absolute;
+  width: 166px;
+  height: 34px;
+  border: none;
+}
+
+.signUpButton {
+  background-image: url("../data/indexElements/signUp.png");
+  background-color: unset;
+  position: absolute;
+  left: 174px;
+  width: 164px;
+  height: 34px;
+  border: none;
+}
+
+.buttons {
+	position: absolute;
+	 margin: 0;
+    left: 50%;
+    top: 522px;
+    width: 340px;
+    height: 34px;
+    transform: translate(-50%, -50%);
+}
+
+#signInFrame {
+	background-color: red;
+	visibility: visible;
+}
