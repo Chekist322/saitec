@@ -1,30 +1,32 @@
 
-function kek() {
-	var a = document.getElementById('top_kek').value;
-	alert(a)
+var name = sample;
+var surname = sample;
+var signInFrame;
+var signUpFrame;
+var cross;
+
+function init() {
+	name = 'sample';
+	surname = 'sample';
+	cross = document.getElementById('cross');
+	signInFrame = document.getElementById('signInFrame');
+	signUpFrame = document.getElementById('signUpFrame');
 }
 
 function showSignInFrame() {
-	var signInFrame = document.getElementById('signInFrame');
-	var signUpFrame = document.getElementById('signUpFrame');
-	 if (signUpFrame.style.visibility !== 'visible') {
-		if (signInFrame.style.visibility === 'visible') {
-			signInFrame.style.visibility = 'hidden';
-		} else {
-			signInFrame.style.visibility = 'visible';
-		}
-	}
+	signInFrame.style.visibility = 'visible';
+	cross.style.visibility = 'visible';
+	
+}
+
+function closeIframe() {
+	signInFrame.style.visibility = 'hidden';
+	signUpFrame.style.visibility = 'hidden';
+	cross.style.visibility = 'hidden';
 }
 
 function showSignUpFrame() {
-	var signUpFrame = document.getElementById('signUpFrame');
-	var signInFrame = document.getElementById('signInFrame');
-	if (signInFrame.style.visibility !== 'visible') {
-		if (signUpFrame.style.visibility === 'visible') {
-			signUpFrame.style.visibility = 'hidden';
-		} else {
-			signUpFrame.style.visibility = 'visible';
-		}
-	}
-
+	cross = document.getElementById('cross');
+	signUpFrame.style.visibility = 'visible';
+	cross.style.visibility = 'visible';
 }

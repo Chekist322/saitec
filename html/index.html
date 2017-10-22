@@ -5,7 +5,7 @@
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
 	<title></title>
 </head>
-<body class="main">
+<body class="main" onload="init()">
 <div class="overlayColor">
 
 <!-- Decor start -->
@@ -23,9 +23,11 @@
 <!-- Decor end -->
 
 
-
+<img src="../data/indexElements/cross.png" id="cross" onclick="closeIframe()">
 <iframe src="signInFrame/signIn.html" id="signInFrame"></iframe>
 <iframe src="signUpFrame/signUp.html" id="signUpFrame"></iframe>
+
+
 
 <div class="buttons">
 	<input type="button" name="signIn" class="signInButton" onclick="showSignInFrame()">

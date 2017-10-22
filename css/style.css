@@ -21,7 +21,6 @@
  	top: 41px;
  	width: 123px;
  	height: 60px;
- 	z-index: 3;
 }
 
 .top_decor {
@@ -55,7 +54,9 @@
   height: 5px;
 }
 
-@font-face {font-family: KEK; src: url(../data/fonts/welcome.ttf);}
+@font-face {font-family: WELCOME; src: url(../data/fonts/welcome.ttf);}
+@font-face {font-family: SIGN; src: url(../data/fonts/SCHLBKI.TTF);}
+
 
 .hello {
 	color: white;
@@ -64,7 +65,7 @@
     top: 400px;
     transform: translate(-50%, -50%);
 	position: absolute;
-	font-family: KEK;
+	font-family: WELCOME;
 	font-size: 22pt;
 	font-style: italic;
 	width: 964px;
@@ -100,12 +101,187 @@
     transform: translate(-50%, -50%);
 }
 
-#signInFrame {
-	background-color: red;
-	visibility: hidden;
+input:focus {
+ 	 border-bottom: 2px solid black;
 }
 
-#signUpFrame {
-	background-color: red;
+#signInFrame {
+	background-color: rgb(255, 255, 255);
+  	position: absolute;
+	margin: 0;
+    left: 50%;
+    top: 43%;
+    transform: translate(-50%, -50%);
+	border: none;
 	visibility: hidden;
+	width: 348px;
+  	height: 325px;
+	z-index: 2;
+}
+
+.logo_blue {
+	position: absolute;
+	width: 163px;
+	height: 80px;
+	left: 50%;
+	transform: translate(-50%, 20px);
+ }
+
+ .emailSignIn {
+	position: absolute;
+	left: 50%;
+	top: 35%;
+	transform: translate(-50%, 20px);
+	width: 315px;
+	font-family: SIGN;
+	font-size: 16pt;
+	color: #020517;
+	border: none;
+    border-bottom: 1px solid black;
+ }
+
+ .passwordSignIn {
+	position: absolute;
+	left: 50%;
+	top: 55%;
+	transform: translate(-50%, 20px);
+	width: 315px;
+	font-family: SIGN;
+	font-size: 16pt;
+	color: #020517;
+	border: none;
+    border-bottom: 1px solid black;
+ }
+
+ .confirmSignIn {
+	background-image: url("../data/indexElements/signIn.png");
+	position: absolute;
+	width: 166px;
+	height: 34px;
+	border: none;
+	left: 50%;
+	top: 75%;
+	transform: translate(-50%, 20px);
+ }
+
+
+#signUpFrame {
+	position: absolute;
+	margin: 0;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+	border: none;
+	background-color: rgb(255, 255, 255);
+	visibility: hidden;
+	width: 348px;
+  	height: 463px;
+	z-index: 2;
+}
+
+.nameSignUp {
+	position: absolute;
+	left: 50%;
+	top: 25%;
+	transform: translate(-50%, 20px);
+	width: 315px;
+	font-family: SIGN;
+	font-size: 16pt;
+	color: #020517;
+	border: none;
+    border-bottom: 1px solid black;
+}
+
+.surnameSignUp {
+	position: absolute;
+	left: 50%;
+	top: 35%;
+	transform: translate(-50%, 20px);
+	width: 315px;
+	font-family: SIGN;
+	font-size: 16pt;
+	color: #020517;
+	border: none;
+    border-bottom: 1px solid black;
+}
+
+.emailSignUp {
+	position: absolute;
+	left: 50%;
+	top: 45%;
+	transform: translate(-50%, 20px);
+	width: 315px;
+	font-family: SIGN;
+	font-size: 16pt;
+	color: #020517;
+	border: none;
+    border-bottom: 1px solid black;
+}
+
+.passwordSignUp {
+	position: absolute;
+	left: 50%;
+	top: 55%;
+	transform: translate(-50%, 20px);
+	width: 315px;
+	font-family: SIGN;
+	font-size: 16pt;
+	color: #020517;
+	border: none;
+    border-bottom: 1px solid black;
+}
+
+.passwordConfirmSignUp {
+	position: absolute;
+	left: 50%;
+	top: 65%;
+	transform: translate(-50%, 20px);
+	width: 315px;
+	font-family: SIGN;
+	font-size: 16pt;
+	color: #020517;
+	border: none;
+    border-bottom: 1px solid black;
+}
+
+.checkbox {
+	height: 15px;
+	width: 15px;
+}
+
+.checkboxLabel {
+	position: absolute;
+	margin: 0;
+	left: 50%;
+	top: 75%;
+	transform: translate(-50%, 20px);
+	height: 15px;
+	width: 315px;
+	font-family: SIGN;
+	font-size: 8pt;
+	color: grey;
+	border: none;
+}
+
+.confirmSignUp {
+	background-image: url("../data/indexElements/signUpConfirm.png");
+	position: absolute;
+	width: 179px;
+	height: 34px;
+	border: none;
+	left: 50%;
+	top: 85%;
+	transform: translate(-50%, 20px);
+}
+
+#cross {
+	width: 20px;
+	position: absolute;
+	height: 20px;
+	left: 58%;
+    top: 28%;
+     transform: translate(-50%, -50%);
+	margin: 0;
+	visibility: hidden;
+	z-index: 3;
 }
