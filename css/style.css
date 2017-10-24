@@ -1,14 +1,14 @@
 .main {
-	background: url(../data/indexElements/bg.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+    background: url(../data/indexElements/bg.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 .overlayColor {
-	background-color: rgba(9, 5, 37, 0.67);
-	position: absolute;
+    background-color: rgba(9, 5, 37, 0.67);
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -16,84 +16,90 @@
 }
 
 .logo_top_left {
-	position: absolute;
- 	left: 74px;
- 	top: 41px;
- 	width: 123px;
- 	height: 60px;
+    position: absolute;
+    left: 74px;
+    top: 41px;
+    width: 123px;
+    height: 60px;
 }
 
 .top_decor {
- 	margin: 0;
+    margin: 0;
     left: 50%;
     transform: translate(-50%, -50%);
-	position: absolute;
-	top: 278px;
-	width: 345px;
-	height: 80px;
+    position: absolute;
+    top: 278px;
+    width: 345px;
+    height: 80px;
 }
 
 .bottom_decor {
-  margin: 0;
+    margin: 0;
     left: 50%;
     transform: translate(-50%, -50%);
-	position: absolute;
-  position: absolute;
-  top: 573px;
-  width: 183px;
-  height: 43px;
+    position: absolute;
+    position: absolute;
+    top: 573px;
+    width: 183px;
+    height: 43px;
 }
 
 .line_decor {
-  margin: 0;
+    margin: 0;
     left: 50%;
     transform: translate(-50%, -50%);
-	position: absolute;
-  top: 494px;
-  width: 683px;
-  height: 5px;
+    position: absolute;
+    top: 494px;
+    width: 683px;
+    height: 5px;
 }
 
-@font-face {font-family: WELCOME; src: url(../data/fonts/welcome.ttf);}
-@font-face {font-family: SIGN; src: url(../data/fonts/SCHLBKI.TTF);}
+@font-face {
+    font-family: WELCOME;
+    src: url(../data/fonts/welcome.ttf);
+}
 
+@font-face {
+    font-family: SIGN;
+    src: url(../data/fonts/SCHLBKI.TTF);
+}
 
 .hello {
-	color: white;
-	margin: 0;
+    color: white;
+    margin: 0;
     left: 50%;
     top: 400px;
     transform: translate(-50%, -50%);
-	position: absolute;
-	font-family: WELCOME;
-	font-size: 22pt;
-	font-style: italic;
-	width: 964px;
-	text-align: center;
-	line-height: 32px;
+    position: absolute;
+    font-family: WELCOME;
+    font-size: 22pt;
+    font-style: italic;
+    width: 964px;
+    text-align: center;
+    line-height: 32px;
 }
 
 .signInButton {
-  background-image: url("../data/indexElements/signIn.png");
-  position: absolute;
-  width: 166px;
-  height: 34px;
-  border: none;
+    background-image: url("../data/indexElements/signIn.png");
+    position: absolute;
+    width: 166px;
+    height: 34px;
+    border: none;
 }
 
 .signUpButton {
-  background-image: url("../data/indexElements/signUp.png");
-  background-color: unset;
-  position: absolute;
-  left: 174px;
-  width: 164px;
-  height: 34px;
-  border: none;
+    background-image: url("../data/indexElements/signUp.png");
+    background-color: unset;
+    position: absolute;
+    left: 174px;
+    width: 164px;
+    height: 34px;
+    border: none;
 }
 
 .buttons {
-	position: absolute;
-	 margin: 0;
+    position: absolute;
+    margin: 0;
     left: 50%;
     top: 522px;
     width: 340px;
@@ -102,186 +108,185 @@
 }
 
 input:focus {
- 	 border-bottom: 2px solid black;
+    border-bottom: 2px solid black;
 }
 
 #signInFrame {
-	background-color: rgb(255, 255, 255);
-  	position: absolute;
-	margin: 0;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    margin: 0;
     left: 50%;
     top: 43%;
     transform: translate(-50%, -50%);
-	border: none;
-	visibility: hidden;
-	width: 348px;
-  	height: 325px;
-	z-index: 2;
+    border: none;
+    visibility: hidden;
+    width: 348px;
+    height: 325px;
+    z-index: 2;
 }
 
 .logo_blue {
-	position: absolute;
-	width: 163px;
-	height: 80px;
-	left: 50%;
-	transform: translate(-50%, 20px);
- }
+    position: absolute;
+    width: 163px;
+    height: 80px;
+    left: 50%;
+    transform: translate(-50%, 20px);
+}
 
- .emailSignIn {
-	position: absolute;
-	left: 50%;
-	top: 35%;
-	transform: translate(-50%, 20px);
-	width: 315px;
-	font-family: SIGN;
-	font-size: 16pt;
-	color: #020517;
-	border: none;
+.emailSignIn {
+    position: absolute;
+    left: 50%;
+    top: 35%;
+    transform: translate(-50%, 20px);
+    width: 315px;
+    font-family: SIGN;
+    font-size: 16pt;
+    color: #020517;
+    border: none;
     border-bottom: 1px solid black;
- }
+}
 
- .passwordSignIn {
-	position: absolute;
-	left: 50%;
-	top: 55%;
-	transform: translate(-50%, 20px);
-	width: 315px;
-	font-family: SIGN;
-	font-size: 16pt;
-	color: #020517;
-	border: none;
+.passwordSignIn {
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%, 20px);
+    width: 315px;
+    font-family: SIGN;
+    font-size: 16pt;
+    color: #020517;
+    border: none;
     border-bottom: 1px solid black;
- }
+}
 
- .confirmSignIn {
-	background-image: url("../data/indexElements/signIn.png");
-	position: absolute;
-	width: 166px;
-	height: 34px;
-	border: none;
-	left: 50%;
-	top: 75%;
-	transform: translate(-50%, 20px);
- }
-
+.confirmSignIn {
+    background-image: url("../data/indexElements/signIn.png");
+    position: absolute;
+    width: 166px;
+    height: 34px;
+    border: none;
+    left: 50%;
+    top: 75%;
+    transform: translate(-50%, 20px);
+}
 
 #signUpFrame {
-	position: absolute;
-	margin: 0;
+    position: absolute;
+    margin: 0;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-	border: none;
-	background-color: rgb(255, 255, 255);
-	visibility: hidden;
-	width: 348px;
-  	height: 463px;
-	z-index: 2;
+    border: none;
+    background-color: rgb(255, 255, 255);
+    visibility: hidden;
+    width: 348px;
+    height: 463px;
+    z-index: 2;
 }
 
 .nameSignUp {
-	position: absolute;
-	left: 50%;
-	top: 25%;
-	transform: translate(-50%, 20px);
-	width: 315px;
-	font-family: SIGN;
-	font-size: 16pt;
-	color: #020517;
-	border: none;
+    position: absolute;
+    left: 50%;
+    top: 25%;
+    transform: translate(-50%, 20px);
+    width: 315px;
+    font-family: SIGN;
+    font-size: 16pt;
+    color: #020517;
+    border: none;
     border-bottom: 1px solid black;
 }
 
 .surnameSignUp {
-	position: absolute;
-	left: 50%;
-	top: 35%;
-	transform: translate(-50%, 20px);
-	width: 315px;
-	font-family: SIGN;
-	font-size: 16pt;
-	color: #020517;
-	border: none;
+    position: absolute;
+    left: 50%;
+    top: 35%;
+    transform: translate(-50%, 20px);
+    width: 315px;
+    font-family: SIGN;
+    font-size: 16pt;
+    color: #020517;
+    border: none;
     border-bottom: 1px solid black;
 }
 
 .emailSignUp {
-	position: absolute;
-	left: 50%;
-	top: 45%;
-	transform: translate(-50%, 20px);
-	width: 315px;
-	font-family: SIGN;
-	font-size: 16pt;
-	color: #020517;
-	border: none;
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%, 20px);
+    width: 315px;
+    font-family: SIGN;
+    font-size: 16pt;
+    color: #020517;
+    border: none;
     border-bottom: 1px solid black;
 }
 
 .passwordSignUp {
-	position: absolute;
-	left: 50%;
-	top: 55%;
-	transform: translate(-50%, 20px);
-	width: 315px;
-	font-family: SIGN;
-	font-size: 16pt;
-	color: #020517;
-	border: none;
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%, 20px);
+    width: 315px;
+    font-family: SIGN;
+    font-size: 16pt;
+    color: #020517;
+    border: none;
     border-bottom: 1px solid black;
 }
 
 .passwordConfirmSignUp {
-	position: absolute;
-	left: 50%;
-	top: 65%;
-	transform: translate(-50%, 20px);
-	width: 315px;
-	font-family: SIGN;
-	font-size: 16pt;
-	color: #020517;
-	border: none;
+    position: absolute;
+    left: 50%;
+    top: 65%;
+    transform: translate(-50%, 20px);
+    width: 315px;
+    font-family: SIGN;
+    font-size: 16pt;
+    color: #020517;
+    border: none;
     border-bottom: 1px solid black;
 }
 
 .checkbox {
-	height: 15px;
-	width: 15px;
+    height: 15px;
+    width: 15px;
 }
 
 .checkboxLabel {
-	position: absolute;
-	margin: 0;
-	left: 50%;
-	top: 75%;
-	transform: translate(-50%, 20px);
-	height: 15px;
-	width: 315px;
-	font-family: SIGN;
-	font-size: 8pt;
-	color: grey;
-	border: none;
+    position: absolute;
+    margin: 0;
+    left: 50%;
+    top: 75%;
+    transform: translate(-50%, 20px);
+    height: 15px;
+    width: 315px;
+    font-family: SIGN;
+    font-size: 8pt;
+    color: grey;
+    border: none;
 }
 
 .confirmSignUp {
-	background-image: url("../data/indexElements/signUpConfirm.png");
-	position: absolute;
-	width: 179px;
-	height: 34px;
-	border: none;
-	left: 50%;
-	top: 85%;
-	transform: translate(-50%, 20px);
+    background-image: url("../data/indexElements/signUpConfirm.png");
+    position: absolute;
+    width: 179px;
+    height: 34px;
+    border: none;
+    left: 50%;
+    top: 85%;
+    transform: translate(-50%, 20px);
 }
 
 #cross {
-	width: 20px;
-	position: absolute;
-	height: 20px;
-	left: 58%;
-    top: 28%;
-     transform: translate(-50%, -50%);
-	margin: 0;
-	visibility: hidden;
-	z-index: 3;
+    width: 20px;
+    position: absolute;
+    height: 20px;
+    left: 58%;
+    top: 27%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    visibility: hidden;
+    z-index: 3;
 }

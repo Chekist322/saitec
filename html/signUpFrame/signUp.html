@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="../../css/style.css">
-	<script type="text/javascript" src="../../js/scripts.js"></script>
-	<title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
+    <script type="text/javascript" src="../../js/scripts.js"></script>
+    <title></title>
 </head>
 <body style="width: 123px; height: 60px;">
 
 <img src="../../data/indexElements/logo_blue.png" class="logo_blue">
 
-<input type="text" name="email" value="" title="name" class="nameSignUp" placeholder="Имя">
-<input type="text" name="email" value="" title="surname" class="surnameSignUp" placeholder="Фамилия">
-<input type="text" name="email" value="" title="email" class="emailSignUp" placeholder="Email">
-<input type="password" name="password" title="password" class="passwordSignUp" placeholder="Придумайте пароль">
+<input name="name" value="" title="name" id="nameSignUp" class="nameSignUp" placeholder="Имя"/>
+<input name="surname" value="" title="surname" id="surnameSignUp" class="surnameSignUp" placeholder="Фамилия"/>
+<input name="email" value="" title="email" id="emailSignUp" class="emailSignUp" placeholder="Email"/>
+<input type="password" name="password" title="password" id="passwordSignUp" class="passwordSignUp" placeholder="Придумайте пароль"/>
 
-<input type="password" name="password" title="password" class="passwordConfirmSignUp" placeholder="Повторите пароль">
+<input type="password" name="password" title="password" id="passwordConfirmSignUp" class="passwordConfirmSignUp" placeholder="Повторите пароль"/>
 <div class="checkboxLabel">
-<input type="checkbox" name="" class="checkbox" id="checkbox">
-<label for="checkbox">Даю согласие на обработку персональных данных</label>
+    <input type="checkbox" name="" class="checkbox" id="checkbox"/>
+    <label for="checkbox">Даю согласие на обработку персональных данных</label>
 </div>
-<input type="button" name="SignUp" class="confirmSignUp">
+<input type="button" name="SignUp" class="confirmSignUp" onclick="register()">
 
 </body>
 </html>
