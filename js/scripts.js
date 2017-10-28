@@ -1,12 +1,12 @@
-var name;
-var surname;
-var email;
-var password;
-var confirmpassword;
-var signInFrame;
-var signUpFrame;
-var cross;
-var users = [];
+let name;
+let surname;
+let email;
+let password;
+let confirmPassword;
+let signInFrame;
+let signUpFrame;
+let cross;
+let users = [];
 
 
 function init() {
@@ -35,7 +35,6 @@ function showSignUpFrame() {
 
 function logIn() {
     users = JSON.parse(localStorage.getItem('myUsers'));
-    alert(users.length);
     email = document.getElementById('email').value;
     password = document.getElementById('password').value;
     for (let i = 0; i < users.length; i++) {
@@ -56,8 +55,8 @@ function register() {
     surname = document.getElementById('surnameSignUp').value;
     email = document.getElementById('emailSignUp').value;
     password = document.getElementById('passwordSignUp').value;
-    confirmpassword = document.getElementById('passwordConfirmSignUp').value;
-    var checked = true;
+    confirmPassword = document.getElementById('passwordConfirmSignUp').value;
+    let checked = true;
     if (name === "") {
         checked = false;
     }
@@ -67,7 +66,7 @@ function register() {
     if (email === "") {
         checked = false;
     }
-    if (confirmpassword === "") {
+    if (confirmPassword === "") {
         checked = false;
     }
     if (password === "") {
@@ -79,7 +78,7 @@ function register() {
         }
     }
     if (checked) {
-        if (password === confirmpassword) {
+        if (password === confirmPassword) {
             users[users.length] = new User(name, surname, email, password);
             localStorage.setItem('myUsers', JSON.stringify(users));
             parent.closeIFrame();
