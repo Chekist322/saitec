@@ -90,10 +90,9 @@ function register() {
     }
 }
 
-function onLoadContent() {
+function onLoadUser() {
     name = localStorage.getItem('name');
     surname = localStorage.getItem('surname');
-    alert(name);
     document.getElementById('userName').innerHTML = name + " " + surname;
 }
 
