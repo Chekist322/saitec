@@ -8,6 +8,21 @@ let signUpFrame;
 let cross;
 let users = [];
 
+let cSharpAnswersRight = [];
+let cSharpAnswers = [];
+
+let marketingAnswersRight = [];
+let marketingAnswers = [];
+
+let automatizationAnswersRight = [];
+let automatizationAnswers = [];
+
+let electrotechnikaAnswersRight = [];
+let electrotechnikaAnswers = [];
+
+let economicAnswersRight = [];
+let economicAnswers = [];
+
 
 function init() {
     cross = document.getElementById('cross');

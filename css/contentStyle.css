@@ -22,26 +22,10 @@ header {
 	box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
-.schoolSubjects {
-	margin-bottom: 20px;
-	background-color: white;
-	width: 235px;
-	height: 235px;
-	box-shadow: 0 0 10px rgba(0,0,0,0.5);
-}
-
 .disciplines {
 	margin-bottom: 20px;
 	background-color: white;
 	width: 235px;
-	height: 235px;
-	box-shadow: 0 0 10px rgba(0,0,0,0.5);
-}
-
-.additional {
-	background-color: white;
-	width: 235px;
-	height: 315px;
 	box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
@@ -64,6 +48,13 @@ nav {
 	position: relative;
 	margin-right: 15px;
 	float: left;
+}
+
+.navHeader {
+	padding: 13px;
+	text-align: center;
+	font-size: 18pt;
+	font-weight: bold;
 }
 
 .main {
@@ -91,6 +82,7 @@ nav {
 	margin-top: 18px;
 	height: 70px;
 	font-size: 16pt;
+	font-weight: bold;
 	color: #E6223B;
 	float: left;
 }
@@ -101,8 +93,54 @@ nav {
 	float: left;
 }
 
+ul {
+	padding-left: 0;
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.navElement {
+	font-size: 14pt;
+	padding: 10px;
+	text-align: center;
+	border-top: 1px solid #E6E6E6;
+	width: inherit;
+	color: darkgrey;
+}
+
+.navElement:hover {
+	color: #020517;
+}
+
+#activePage {
+	background-color: #E9233C;
+	color: white;
+}
+
 #userName {
 	height: 70px;
 	font-size: 16pt;
 	color: white;
+}
+
+#contentFrame {
+	width: 100%;
+	height: 95%;
+}
+
+#getTest {
+	width: 100%;
+	height: 5%;
+	font-size: 24pt;
+	text-align: center;
+	color: white;
+	background-color: #e67684;
+}
+
+#getTest:hover {
+	background-color: #E6223B;
 }
