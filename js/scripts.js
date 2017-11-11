@@ -96,6 +96,10 @@ function onLoadUser() {
     document.getElementById('userName').innerHTML = name + " " + surname;
 }
 
+function nextQuestion(nextFrame) {
+    window.location = nextFrame;
+}
+
 
 class User {
     constructor(aName, aSurname, aEmail, aPassword) {
