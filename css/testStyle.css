@@ -9,7 +9,7 @@
 @font-face {font-family: CHEBUREK; src: url(../data/fonts/in/SCHLBKBI.TTF);}
 
 body {
-    font-family: FIRST;
+    font-family: FIRST, serif;
     background-color: #E6E6E6;
 }
 
@@ -135,6 +135,7 @@ a {
 }
 
 .questionContent {
+    font-weight: bold;
     margin-left: 20px;
     margin-right: 20px;
     margin-bottom: 20px;
@@ -146,4 +147,50 @@ a {
 
 .answer {
     margin: 10px;
+}
+
+input {
+}
+
+#nextQuestion {
+    font-size: 14pt;
+    padding: 4px;
+    background-color: #e67684;
+    color: white;
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0px);
+}
+
+#nextQuestion:hover {
+    background-color: #E6223B;
+    cursor: pointer;
+
+}
+
+#nextQuestion::selection {
+    background: transparent;
+}
+
+#showResult {
+    font-size: 14pt;
+    padding: 4px;
+    background-color: #e67684;
+    color: white;
+    display: inline-block;
+    position: absolute;
+    left: 80%;
+    width: 180px;
+    transform: translate(-50%, 0px);
+}
+
+#showResult:hover {
+    background-color: #E6223B;
+    cursor: pointer;
+
+}
+
+#showResult::selection {
+    background: transparent;
 }

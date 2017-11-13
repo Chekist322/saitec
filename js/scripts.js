@@ -8,19 +8,19 @@ let signUpFrame;
 let cross;
 let users = [];
 
-let cSharpAnswersRight = [];
+let cSharpAnswersRight = [3, 2, 1, 1, 2, 4, 3, 3, 2, 2, 1, 3, 4];
 let cSharpAnswers = [];
 
-let marketingAnswersRight = [];
+let marketingAnswersRight = [2, 2, 3, 4, 3, 2, 3, 2, 3, 3, 4, 2, 3, 2];
 let marketingAnswers = [];
 
-let automatizationAnswersRight = [];
+let automatizationAnswersRight = [3, 2, 1, 3, 2, 1, 1, 3, 2, 1, 3, 2, 1, 3, 1];
 let automatizationAnswers = [];
 
-let electrotechnikaAnswersRight = [];
+let electrotechnikaAnswersRight = [1, 3, 3, 2, 2, 3, 1, 3, 2, 1, 3, 2, 1, 1, 2];
 let electrotechnikaAnswers = [];
 
-let economicAnswersRight = [];
+let economicAnswersRight = [4, 1, 1, 3, 2, 3, 3, 2, 2, 4, 2, 2, 2, 3, 1];
 let economicAnswers = [];
 
 
@@ -57,7 +57,7 @@ function logIn() {
             if (password === users[i].mPassword) {
                 localStorage.setItem('name', users[i].mName);
                 localStorage.setItem('surname', users[i].mSurname);
-                parent.window.location = '../content/content.html';
+                parent.window.location = '../content/automatization/content.html';
                 break;
             }
         }
@@ -108,11 +108,144 @@ function register() {
 function onLoadUser() {
     name = localStorage.getItem('name');
     surname = localStorage.getItem('surname');
+    alert(name + surname);
     document.getElementById('userName').innerHTML = name + " " + surname;
+    localStorage.setItem('name', name);
+    localStorage.setItem('surname', surname);
+
 }
 
-function nextQuestion(nextFrame) {
-    window.location = nextFrame;
+function nextQuestion(theme, nextFrame) {
+    let form = document.getElementById('radio');
+    let answer = form.elements['answer'].value;
+    let first;
+    switch (theme) {
+        case 'automatization':
+            first = localStorage.getItem('first');
+            if (first === 'true') {
+                first = false;
+                localStorage.setItem('first', first);
+            } else {
+                automatizationAnswers = JSON.parse(localStorage.getItem('arr'));
+            }
+            automatizationAnswers.push(answer);
+            localStorage.setItem('arr', JSON.stringify(automatizationAnswers));
+            break;
+        case 'cSharp':
+            first = localStorage.getItem('first');
+            if (first === 'true') {
+                first = false;
+                localStorage.setItem('first', first);
+            } else {
+                cSharpAnswers = JSON.parse(localStorage.getItem('arr'));
+            }
+            cSharpAnswers.push(answer);
+            localStorage.setItem('arr', JSON.stringify(cSharpAnswers));
+            break;
+        case 'economic' :
+            first = localStorage.getItem('first');
+            if (first === 'true') {
+                first = false;
+                localStorage.setItem('first', first);
+            } else {
+                economicAnswers = JSON.parse(localStorage.getItem('arr'));
+            }
+            economicAnswers.push(answer);
+            localStorage.setItem('arr', JSON.stringify(economicAnswers));
+            break;
+        case 'electrotechnika':
+            first = localStorage.getItem('first');
+            if (first === 'true') {
+                first = false;
+                localStorage.setItem('first', first);
+            } else {
+                electrotechnikaAnswers = JSON.parse(localStorage.getItem('arr'));
+            }
+            electrotechnikaAnswers.push(answer);
+            localStorage.setItem('arr', JSON.stringify(electrotechnikaAnswers));
+            break;
+        case 'marketing':
+            first = localStorage.getItem('first');
+            if (first === 'true') {
+                first = false;
+                localStorage.setItem('first', first);
+            } else {
+                marketingAnswers = JSON.parse(localStorage.getItem('arr'));
+            }
+            marketingAnswers.push(answer);
+            localStorage.setItem('arr', JSON.stringify(marketingAnswers));
+            break;
+    }
+    if (nextFrame === 'result') {
+        showResult(theme);
+    } else {
+        window.location = nextFrame;
+    }
+}
+
+function showResult(theme) {
+    let counter = 0;
+    switch (theme) {
+        case 'automatization':
+            let first = localStorage.getItem('first');
+            if (first === 'true') {
+            } else {
+                automatizationAnswers = JSON.parse(localStorage.getItem('arr'));
+                if (automatizationAnswers !== 0) {
+                    automatizationAnswers = JSON.parse(localStorage.getItem('arr'));
+                    for (let i = 0; i < automatizationAnswers.length; i++) {
+                        if (automatizationAnswers[i] === automatizationAnswersRight[i].toString()) {
+                            counter++;
+                        }
+                    }
+                }
+                break;
+            }
+        case 'cSharp':
+            cSharpAnswers = JSON.parse(localStorage.getItem('arr'));
+            for (let i = 0; i < cSharpAnswers.length; i++) {
+                if (cSharpAnswers[i] === cSharpAnswersRight[i].toString()) {
+                    counter++;
+                }
+            }
+            break;
+            break;
+        case 'economic' :
+            economicAnswers = JSON.parse(localStorage.getItem('arr'));
+            for (let i = 0; i < economicAnswers.length; i++) {
+                if (economicAnswers[i] === economicAnswersRight[i].toString()) {
+                    counter++;
+                }
+            }
+            break;
+            break;
+        case 'electrotechnika':
+            electrotechnikaAnswers = JSON.parse(localStorage.getItem('arr'));
+            for (let i = 0; i < electrotechnikaAnswers.length; i++) {
+                if (electrotechnikaAnswers[i] === electrotechnikaAnswersRight[i].toString()) {
+                    counter++;
+                }
+            }
+            break;
+            break;
+        case 'marketing':
+            marketingAnswers = JSON.parse(localStorage.getItem('arr'));
+            for (let i = 0; i < marketingAnswers.length; i++) {
+                if (marketingAnswers[i] === marketingAnswersRight[i].toString()) {
+                    counter++;
+                }
+            }
+            break;
+            break;
+    }
+    localStorage.setItem('counter', JSON.stringify(counter));
+    window.location = 'result.html';
+
+}
+
+function onLoadResult() {
+    let right = JSON.parse(localStorage.getItem('counter'));
+    let result = document.getElementById('result').innerHTML = "Ваш результат: " + right + "/15";
 }
 
 

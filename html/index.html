@@ -6,34 +6,34 @@
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <title></title>
 </head>
-<body class="main" onload="init()">
-<div class="overlayColor">
+<body onload="init()">
+<div class="main">
+    <div class="overlayColor">
+        <!-- Decor start -->
+        <img src="../data/indexElements/logo_white.png" class="logo_top_left">
+        <img src="../data/indexElements/top_decor.png" class="top_decor">
+        <div class="hello">
+            <p>
+                Добро пожаловать на образовательный портал НГТУ. Здесь вы найдете <br>
+                необходимые учебные пособия по дисциплинам и сможете проверить <br>
+                свои знания на тестах.
+            </p>
+        </div>
+        <img src="../data/indexElements/bottom_decor.png" class="bottom_decor">
+        <img src="../data/indexElements/line_decor.png" class="line_decor">
+        <!-- Decor end -->
 
-    <!-- Decor start -->
-    <img src="../data/indexElements/logo_white.png" class="logo_top_left">
-    <img src="../data/indexElements/top_decor.png" class="top_decor">
-    <div class="hello">
-        <p>
-            Добро пожаловать на образовательный портал НГТУ. Здесь вы найдете <br>
-            необходимые учебные пособия по дисциплинам и сможете проверить <br>
-            свои знания на тестах.
-        </p>
+
+        <img src="../data/indexElements/cross.png" id="cross" onclick="closeIFrame()">
+        <iframe src="signInFrame/signIn.html" id="signInFrame"></iframe>
+        <iframe src="signUpFrame/signUp.html" id="signUpFrame"></iframe>
+
+
+        <div class="buttons">
+            <input type="button" name="signIn" class="signInButton" onclick="showSignInFrame()">
+            <input type="button" name="signUp" class="signUpButton" onclick="showSignUpFrame()">
+        </div>
     </div>
-    <img src="../data/indexElements/bottom_decor.png" class="bottom_decor">
-    <img src="../data/indexElements/line_decor.png" class="line_decor">
-    <!-- Decor end -->
-
-
-    <img src="../data/indexElements/cross.png" id="cross" onclick="closeIFrame()">
-    <iframe src="signInFrame/signIn.html" id="signInFrame"></iframe>
-    <iframe src="signUpFrame/signUp.html" id="signUpFrame"></iframe>
-
-
-    <div class="buttons">
-        <input type="button" name="signIn" class="signInButton" onclick="showSignInFrame()">
-        <input type="button" name="signUp" class="signUpButton" onclick="showSignUpFrame()">
-    </div>
-
 </div>
 </body>
 </html>

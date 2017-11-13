@@ -6,46 +6,30 @@
     <script type="text/javascript" src="../../../../js/scripts.js"></script>
     <title></title>
 </head>
-<body class="question">
+<body class="question" onload="function firstQuestion() {
+    localStorage.clear();
+    let first = true;
+    localStorage.setItem('first', first);
+}
+firstQuestion()">
 
 <div class="questionTitle">
-    <h2 style="margin-bottom: 20px;">LOREM</h2>
-    <h3>LOREM IPSUM</h3>
+    <h2 style="margin-bottom: 20px;">Системы автоматизации</h2>
+    <h3>Вопрос №1</h3>
 </div>
 <div class="questionContent">
-    <p>Lorem ipsum, dolor sit amen. Lorem ipsum, dolor sit amen. Lorem ipsum, dolor sit amen.
-        Lorem ipsum, dolor sit amen. Lorem ipsum, dolor sit amen. Lorem ipsum, dolor sit amen. Lorem ipsum, dolor sit
-        amen.
-        Lorem ipsum, dolor sit amen. Lorem ipsum, dolor sit amen. Lorem ipsum, dolor sit amen. Lorem ipsum, dolor sit
-        amen.
-        Lorem ipsum, dolor sit amen. Lorem ipsum, dolor sit amen. Lorem ipsum, dolor sit amen. Lorem ipsum, dolor sit
-        amen.</p>
+    <p>Что такое этап реализации?</p>
 </div>
 
-<ul class="answers">
-    <li class="answer">
-        <input type="radio" name="answer"/> 1)
-    </li>
-    <li class="answer">
-        <input type="radio" name="answer"/> 2)
-    </li>
-    <li class="answer">
-        <input type="radio" name="answer"/> 3)
-    </li>
-    <li class="answer">
-        <input type="radio" name="answer"/> 4)
-    </li>
-</ul>
-
-<span style="
-    left: 60%;
-    transform: translate(-50%, -50%);
-    position: absolute;
-    ">
-   <input type="button" value="Подтвердить ответ" onclick="nextQuestion('question2.html')"/>
-    <input type="button" value="Узнать результат"/>
-</span>
-
-
+<form class="answers" id="radio">
+    <label for="r1"></label><input id="r1" type="radio" name="answer" value=1/> 1) построение выводов по данным,
+    полученным путем имитации<br>
+    <label for="r2"></label><input id="r2" type="radio" name="answer" value=2/> 2) теоретическое применение результатов
+    программирования<br>
+    <label for="r3"></label><input id="r3" type="radio" name="answer" value=3/> 3)практическое применение модели и
+    результатов моделирования<br>
+</form>
+<div id="nextQuestion" onclick="nextQuestion('automatization','question2.html')">Подтвердить ответ</div>
+<div id="showResult" onclick="showResult('automatization')"> Узнать результат</div>
 </body>
 </html>
