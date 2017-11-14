@@ -8,7 +8,7 @@ let signUpFrame;
 let cross;
 let users = [];
 
-let cSharpAnswersRight = [3, 2, 1, 1, 2, 4, 3, 3, 2, 2, 1, 3, 4];
+let cSharpAnswersRight = [3, 2, 1, 1, 2, 4, 3, 3, 2, 2, 1, 3, 2, 4, 1];
 let cSharpAnswers = [];
 
 let marketingAnswersRight = [2, 2, 3, 4, 3, 2, 3, 2, 3, 3, 4, 2, 3, 2];
@@ -185,9 +185,9 @@ function nextQuestion(theme, nextFrame) {
 
 function showResult(theme) {
     let counter = 0;
+    let first = localStorage.getItem('first');
     switch (theme) {
         case 'automatization':
-            let first = localStorage.getItem('first');
             if (first === 'true') {
             } else {
                 automatizationAnswers = JSON.parse(localStorage.getItem('arr'));
@@ -199,16 +199,21 @@ function showResult(theme) {
                         }
                     }
                 }
-                break;
-            }
-        case 'cSharp':
-            cSharpAnswers = JSON.parse(localStorage.getItem('arr'));
-            for (let i = 0; i < cSharpAnswers.length; i++) {
-                if (cSharpAnswers[i] === cSharpAnswersRight[i].toString()) {
-                    counter++;
-                }
             }
             break;
+        case 'cSharp':
+            if (first === 'true') {
+            } else {
+                cSharpAnswers = JSON.parse(localStorage.getItem('arr'));
+                if (cSharpAnswers !== 0) {
+                    cSharpAnswers = JSON.parse(localStorage.getItem('arr'));
+                    for (let i = 0; i < cSharpAnswers.length; i++) {
+                        if (cSharpAnswers[i] === cSharpAnswersRight[i].toString()) {
+                            counter++;
+                        }
+                    }
+                }
+            }
             break;
         case 'economic' :
             economicAnswers = JSON.parse(localStorage.getItem('arr'));
@@ -218,7 +223,6 @@ function showResult(theme) {
                 }
             }
             break;
-            break;
         case 'electrotechnika':
             electrotechnikaAnswers = JSON.parse(localStorage.getItem('arr'));
             for (let i = 0; i < electrotechnikaAnswers.length; i++) {
@@ -226,7 +230,6 @@ function showResult(theme) {
                     counter++;
                 }
             }
-            break;
             break;
         case 'marketing':
             marketingAnswers = JSON.parse(localStorage.getItem('arr'));
@@ -236,11 +239,9 @@ function showResult(theme) {
                 }
             }
             break;
-            break;
     }
     localStorage.setItem('counter', JSON.stringify(counter));
     window.location = 'result.html';
-
 }
 
 function onLoadResult() {
