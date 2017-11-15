@@ -55,8 +55,8 @@ function logIn() {
     for (let i = 0; i < users.length; i++) {
         if (email === users[i].mEmail) {
             if (password === users[i].mPassword) {
-                localStorage.setItem('name', users[i].mName);
-                localStorage.setItem('surname', users[i].mSurname);
+                localStorage.name = users[i].mName;
+                localStorage.surname = users[i].mSurname;
                 parent.window.location = '../content/automatization/content.html';
                 break;
             }
@@ -106,13 +106,11 @@ function register() {
 }
 
 function onLoadUser() {
-    name = localStorage.getItem('name');
-    surname = localStorage.getItem('surname');
-    alert(name + surname);
-    document.getElementById('userName').innerHTML = name + " " + surname;
-    localStorage.setItem('name', name);
-    localStorage.setItem('surname', surname);
-
+    if (localStorage.name !== undefined) {
+        document.getElementById('userName').innerHTML = localStorage.name + " " + localStorage.surname;
+    } else {
+        document.getElementById('userName').innerHTML = "";
+    }
 }
 
 function nextQuestion(theme, nextFrame) {
@@ -216,26 +214,44 @@ function showResult(theme) {
             }
             break;
         case 'economic' :
-            economicAnswers = JSON.parse(localStorage.getItem('arr'));
-            for (let i = 0; i < economicAnswers.length; i++) {
-                if (economicAnswers[i] === economicAnswersRight[i].toString()) {
-                    counter++;
+            if (first === 'true') {
+            } else {
+                economicAnswers = JSON.parse(localStorage.getItem('arr'));
+                if (economicAnswers !== 0) {
+                    economicAnswers = JSON.parse(localStorage.getItem('arr'));
+                    for (let i = 0; i < economicAnswers.length; i++) {
+                        if (economicAnswers[i] === economicAnswersRight[i].toString()) {
+                            counter++;
+                        }
+                    }
                 }
             }
             break;
         case 'electrotechnika':
-            electrotechnikaAnswers = JSON.parse(localStorage.getItem('arr'));
-            for (let i = 0; i < electrotechnikaAnswers.length; i++) {
-                if (electrotechnikaAnswers[i] === electrotechnikaAnswersRight[i].toString()) {
-                    counter++;
+            if (first === 'true') {
+            } else {
+                electrotechnikaAnswers = JSON.parse(localStorage.getItem('arr'));
+                if (electrotechnikaAnswers !== 0) {
+                    electrotechnikaAnswers = JSON.parse(localStorage.getItem('arr'));
+                    for (let i = 0; i < electrotechnikaAnswers.length; i++) {
+                        if (electrotechnikaAnswers[i] === electrotechnikaAnswersRight[i].toString()) {
+                            counter++;
+                        }
+                    }
                 }
             }
             break;
         case 'marketing':
-            marketingAnswers = JSON.parse(localStorage.getItem('arr'));
-            for (let i = 0; i < marketingAnswers.length; i++) {
-                if (marketingAnswers[i] === marketingAnswersRight[i].toString()) {
-                    counter++;
+            if (first === 'true') {
+            } else {
+                marketingAnswers = JSON.parse(localStorage.getItem('arr'));
+                if (marketingAnswers !== 0) {
+                    marketingAnswers = JSON.parse(localStorage.getItem('arr'));
+                    for (let i = 0; i < marketingAnswers.length; i++) {
+                        if (marketingAnswers[i] === marketingAnswersRight[i].toString()) {
+                            counter++;
+                        }
+                    }
                 }
             }
             break;
