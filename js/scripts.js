@@ -96,13 +96,26 @@ function register() {
         if (password === confirmPassword) {
             users[users.length] = new User(name, surname, email, password);
             localStorage.setItem('myUsers', JSON.stringify(users));
-            parent.closeIFrame();
+            closeSelf();
         } else {
             alert('Неправильное подтверждение пароля!');
         }
     } else {
         alert('Ошибка! Поля оставлены пустыми или пользователь с таким email уже зарегистрирован.');
     }
+}
+
+function receiveMessage(event) {
+    if (event.data == "removetheiframe") {
+        var element = document.getElementById('signUpFrame');
+        element.parentNode.removeChild(element);
+    }
+}
+
+window.addEventListener("message", receiveMessage, false);
+
+function closeSelf() {
+    parent.window.postMessage("removetheiframe", "*");
 }
 
 function onLoadUser() {
